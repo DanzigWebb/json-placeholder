@@ -1,0 +1,20 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    z-index: 30;
+    opacity: .4;
+    animation: overlay ease .4s;
+}
+
+@keyframes overlay {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: .4;
+    }
+}

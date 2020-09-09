@@ -1,0 +1,45 @@
+body {
+    min-height: 100vh;
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@import "~bulma";
+@import "components/overlay";
+
+.sidebar {
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 340px;
+    padding: 2rem;
+    transition: ease all .4s;
+    z-index: 100;
+    background-color: #fff;
+    transform: translateX(100%);
+}
+
+.sidebar.active {
+    box-shadow: 0 0 6px black;
+    transform: translateX(0);
+}
+
+.json-item {
+    padding: .4rem 0;
+    
+    .task {
+        display: flex;
+        align-items: center;
+        h2 {
+            margin-bottom: 10px;
+        }
+        
+        [type="checkbox"] {
+            margin-right: 1rem;
+        }
+    }
+}
