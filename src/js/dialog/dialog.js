@@ -53,17 +53,17 @@ export class Dialog {
     return (`
       <div class="dialog">
         <div class="dialog__content">
-            <h3 class="dialog__title subtitle is-3">
-                ${this.data.title}
-            </h3>
-            <hr>
-            <div class="dialog__message">
-                ${this.data.message}
-            </div>
-            <div class="dialog__control">
-                <button data-dialog-action="cancel" class="button">Cancel</button>
-                <button data-dialog-action="confirm" class="button is-success">Ok</button>
-            </div>
+          <h3 class="dialog__title subtitle is-3">
+            ${this.data.title}
+          </h3>
+          <hr>
+          <div class="dialog__message">
+            ${this.data.message}
+          </div>
+          <div class="dialog__control">
+            <button data-dialog-action="cancel" class="button">Cancel</button>
+            <button data-dialog-action="confirm" class="button is-success">Ok</button>
+          </div>
         </div>
       </div>
     `)
@@ -74,6 +74,7 @@ function setActionListener({target}, resolve) {
   if (target.matches('.button')) {
     const {dialogAction} = target.dataset
     this.close()
+
     dialogAction === 'confirm'
         ? resolve(true)
         : resolve(false)
